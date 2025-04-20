@@ -1,8 +1,6 @@
 import 'package:destini_app_flutter/story_brain.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
-
 void main() => runApp(Destini());
 
 class Destini extends StatelessWidget {
@@ -65,13 +63,12 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   child: Text(
-                    //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
-                    'Choice 1',
+                    storyBrain.getChoice1(),
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 18.0),
               Expanded(
                 flex: 2,
                 //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this FlatButton.
@@ -88,9 +85,8 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   child: Text(
-                    //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                    'Choice 2',
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    storyBrain.getChoice2(),
+                    style: TextStyle(fontSize: 18.0, color: Colors.white),
                   ),
                 ),
               ),

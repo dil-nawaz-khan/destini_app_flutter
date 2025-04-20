@@ -52,7 +52,9 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: TextButton(
                   onPressed: () {
-                    storyBrain.nextStory(1);
+                    setState(() {
+                      storyBrain.nextStory(1);
+                    });
                   },
 
                   style: TextButton.styleFrom(
@@ -74,7 +76,9 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: TextButton(
                   onPressed: () {
-                    storyBrain.nextStory(2);
+                    setState(() {
+                      storyBrain.nextStory(2);
+                    });
                   },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.blue,
